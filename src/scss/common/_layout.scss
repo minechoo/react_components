@@ -1,0 +1,22 @@
+main {
+	width: 100%;
+	height: calc(100vh - 72px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&.main{
+		justify-content: flex-start;
+		padding-top:110px;
+	}
+
+	div {
+		color: #787878;
+	}
+
+	input {
+		border: 1px solid #ddd;
+	}
+}
+
