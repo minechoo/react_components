@@ -15,8 +15,14 @@ import { Counter } from './components/sub/Counter';
 import { InputText } from './components/sub/InputText';
 import { MultipleText } from './components/sub/MultipleText';
 import { UserList } from './components/sub/UserList';
+import Login from './components/common/Login'
 
 import Header from './components/common/Header';
+
+import { GoogleAuthProvider } from "firebase/auth";
+
+const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 function App() {
 	const menu = useRef(null);
@@ -36,6 +42,7 @@ function App() {
 				<Route path='/input' element={<InputText />} />
 				<Route path='/multi' element={<MultipleText />} />
 				<Route path='/list' element={<UserList />} />
+				<Route path='/login' element={<Login />} />
 			</Routes>
 		</div>
 	);

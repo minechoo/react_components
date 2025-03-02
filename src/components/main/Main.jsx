@@ -17,7 +17,7 @@ import Accordion from '../sub/Accordion';
 function BtnRolling() {
 	const btnStart = useRef(null);
 	const btnStop = useRef(null);
-	const swiper = useSwiper();
+	const swiper = useSwiper(); 
 	return (
 		<nav className='controls'>
 			<FontAwesomeIcon
@@ -52,8 +52,8 @@ const Main = () => {
 	const fetchYoutube = async () => {
 		try{
 		const key = 'AIzaSyDa2SbLGSMQy9QKAMf-K6oWRxh2ejS4R7M'; //api 키
-		const list = 'PLMafzyXZ12TP0yzcTdinxf49eUZVpFwYR'; //class 브라우저 상단값
-		const num = 3;
+		const list = 'PL3pCP3TkDq8tafgEblWv7GURFr14KSwa-'; //class 브라우저 상단값
+		const num = 20;
 		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
 
 		const result = await axios.get(url);
